@@ -9,6 +9,10 @@ import {
   faCaretSquareUp,
   faMinusCircle,
   faPlusCircle,
+  faSignInAlt,
+  faMask,
+  faBookOpen,
+  faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -24,7 +28,11 @@ library.add(
   faCaretSquareDown,
   faCaretSquareUp,
   faMinusCircle,
-  faPlusCircle
+  faPlusCircle,
+  faSignInAlt,
+  faMask,
+  faBookOpen,
+  faUserCircle,
 );
 
 function App() {

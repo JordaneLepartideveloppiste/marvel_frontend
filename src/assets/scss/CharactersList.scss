@@ -1,0 +1,22 @@
+.characters_list {
+    background-color: #bababa;
+    background-image: url('../img/bg_card2.jpeg');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    box-shadow: 0px 40px 20px 2px inset #707070;
+    padding-top: 2rem;
+  .characters_list_content {
+      .characters_list_title {
+        font-family: 'Bangers', cursive;
+        font-size: 1.4rem;
+        margin-left: 2rem;
+        color: #302f2f;
+      }
+      .characters_list_cards {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row wrap;
+      }
+  }
+}

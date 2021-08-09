@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-//import "../assets/css/components/SearchBar.scss";
+import "../assets/scss/SearchInput.scss";
 
 const SearchInput = () => {
-  const [searchField, setSearchField] = useState("Rechercher des articles");
+  const [searchField, setSearchField] = useState("Search...");
 
   const handleChange = (e) => {
     setSearchField(e.target.value);
@@ -13,7 +13,7 @@ const SearchInput = () => {
   };
   return (
     <div className="search">
-      <FontAwesomeIcon icon="search" color="grey" />
+
       <input
         type="text"
         id="search_input"
@@ -21,6 +21,7 @@ const SearchInput = () => {
         onChange={handleChange}
         onClick={handleClick}
       />
+      <FontAwesomeIcon icon="search" color="rgb(41, 41, 41)" />
     </div>
   );
 };

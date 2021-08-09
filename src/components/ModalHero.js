@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import CarouselComics from "./CarouselComics";
+
 
 
 const ModalHero = ({hero, showModalHero, setShowModalHero}) => {
@@ -45,8 +45,23 @@ const ModalHero = ({hero, showModalHero, setShowModalHero}) => {
         <div className="modal_body">
             <div className="hero_comics">
                 {data.comics.map((comic, index) => {
-                    return (
+
+                    let notFound = comic.thumbnail.path.indexOf('image_not_available')
+             
+                   
+                   
+
+                    return notFound === -1 ? (
+                        <>
                     <img src={comic.thumbnail.path + "." + comic.thumbnail.extension} alt="comic_cover"/>
+                    <p>{comic.description}</p>
+                    </>
+                    ) : (
+                        <>
+                        <span>{comic.title}</span>
+                        
+                        <p>{comic.description}</p>
+                        </>
                     )
                 })}
             </div>

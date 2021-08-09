@@ -1,0 +1,22 @@
+.header {
+    .header_content {
+        margin-bottom: -1.8rem;
+        .effect_bar{
+            width: 100vw;
+            height: 0.2rem;
+            background-color: #BABABA;
+            box-shadow: 0px 10px 25px 25px #bababa;
+        }
+        .image {
+            
+            img {
+                object-fit: cover;
+                width: 100%;
+                max-height: 20vh;
+                
+
+            }
+            
+        }
+    }
+}

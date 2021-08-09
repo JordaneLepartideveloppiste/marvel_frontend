@@ -1,4 +1,5 @@
 import bg_header from "../assets/img/img_header.jpeg"
+import "../assets/scss/Header.scss"
 
 const Header = () => {
     return (
@@ -8,9 +9,6 @@ const Header = () => {
                 <div className="image">
             
                         <img src={bg_header} alt="comics_image" />
-                        <div className="hang_span">
-                            <span>Retrouve tes comics et personnages favoris</span>
-                        </div>
                
                 </div>
             </div>
