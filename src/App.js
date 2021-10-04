@@ -3,6 +3,7 @@ import './App.scss';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faSearch,
+  faTimes,
   faHeart,
   faBars,
   faCaretSquareDown,
@@ -23,6 +24,7 @@ import Comics from './containers/Comics';
 import Favorites from './containers/Favorites';
 library.add(
   faSearch,
+  faTimes,
   faHeart,
   faBars,
   faCaretSquareDown,

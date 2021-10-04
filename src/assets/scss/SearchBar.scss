@@ -1,0 +1,117 @@
+#search_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
+    width: 25vw;
+    
+    
+    margin: 4rem auto 0;
+
+    #search_input {
+      width: 20vw;
+      font-family: "Trade Winds", cursive;
+      font-size: 1.4rem;
+      height: 2.8rem;
+      background-color: #f5f4f4c2;
+      border: none;
+      padding: 0 1rem;
+      border: 2px solid #737373;
+    border-radius: 50px 0 0 50px;
+      border-right: none;
+      outline: none !important;
+    }
+    #search_btn {
+      background-color: #f5f4f4c2;
+      border: none;
+      width: 4vw;
+      height: 3.2rem;
+      padding: 0.4rem 1rem;
+      border: 2px solid #737373;
+    border-radius: 0 50px 50px 0;
+    }
+  }
+  .suggestions {
+      width: 23vw;
+      max-height: 30vh;
+      overflow-y: scroll;
+      list-style: none;
+      border-right: 2px solid #737373;
+      padding-top: 0.2rem;
+      margin-top: 0;
+      margin-right: 5.9rem;
+      
+      /* .suggestion-active {
+          transition: 0.2s;
+        transform: scale(1.1);
+      } */
+      .suggestion {
+          cursor: pointer;
+        width: 25vw;
+        overflow-x: hidden;
+      font-family: "Trade Winds", cursive;
+      font-size: 1rem;
+      height: 2.4rem;
+      background-color: #f5f4f4c2;
+      border: none;
+      padding: 0.4rem 1rem 0.4rem 1rem ;
+      border: 1px solid #737373;
+    border-radius: 50px 0 0 50px;
+      border-right: none;
+      margin-bottom: 0.3rem;
+
+      &:hover {
+          transition: 0.2s;
+        transform: translateX(1rem);
+          text-shadow: 1px 1px 1px rgb(149, 149, 149);
+      }
+      }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #search_form {
+    .search {
+      padding-right: 0.6rem;
+      margin-top: 0rem;
+      width: 35vw;
+      background-color: #f5f4f4c2;
+      position: relative;
+      bottom: 200px;
+      right: -75px;
+
+      #search_input {
+        width: 30vw;
+        height: 1.8rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: "760px") {
+  #search_form {
+    .search {
+      justify-content: space-between;
+      width: 84vw;
+      padding-right: 1rem;
+      margin-top: 0.4rem;
+      margin-right: 1rem;
+      background-color: #f5f4f4c2;
+      position: inherit;
+
+      #search_input {
+        width: 78vw;
+        height: 1.8rem;
+        margin-right: 0.4rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

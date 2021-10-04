@@ -4,14 +4,16 @@ import { Link, useHistory, } from "react-router-dom";
 import ModalHero from "./ModalHero";
 import "../assets/scss/CharacterCard.scss"
 
-const CharacterCard = ({ hero }) => {
-    const [showModalHero, setShowModalHero] = useState(false);
-  const history = useHistory();
+const CharacterCard = ({ hero, setShowModalHero, setHeroId }) => {
 
-    const handleClick = () => {
-        setShowModalHero(true);
-       
-    }
+  const handleClick = () => {
+    setHeroId(hero._id);
+    setShowModalHero(true);
+  };
+  const handleLike = () => {
+    setHeroId(hero._id);
+    setShowModalHero(true);
+  };
 
   return (
     <div className="character_card">
@@ -34,18 +36,17 @@ const CharacterCard = ({ hero }) => {
           ) : (
             <div className="no_description">
               <p className="no_hero_description">
-                {hero.name} does not want to tell us his story. This contain will be provided in a few. Thanks for understanding...
+                {hero.name} does not want to tell us his story. This contain
+                will be provided in a few. Thanks for understanding...
               </p>
             </div>
           )}
-          <Link onClick={handleClick}>Comics</Link>
-          {showModalHero && (
-            <ModalHero
-              hero={hero}
-              showModalHero={showModalHero}
-              setShowModalHero={setShowModalHero}
-            />
-          )}
+          <div className="hero_btn">
+            <Link className="card-char-btn to_comics" onClick={handleClick}>Comics</Link>
+          <Link className="card-char-btn to_favorites" onClick={handleLike}>
+            <img src="https://img.icons8.com/windows/38/000000/captain-america.png" />
+          </Link>
+          </div>
         </div>
       </div>
     </div>

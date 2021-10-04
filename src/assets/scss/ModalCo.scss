@@ -1,0 +1,41 @@
+.modal_co {
+  width: 33vw;
+  background-color: #4c4848;
+  border-radius: 10px;
+  border: 2px solid rgb(237, 27, 37);
+  box-shadow: 0rem 0.4rem 3rem rgb(50, 50, 50);
+  z-index: 20;
+  position: absolute;
+  top: 8rem;
+  right: 33%;
+
+  .modal_co_content {
+    .modal_co_header {
+      #modalClose_btn {
+        font-family: "Bangers", cursive;
+        border-radius: 50%;
+        background-color: rgb(237, 27, 37);
+        border: 2px solid black;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: bold;
+        position: absolute;
+        top: -0.6rem;
+        right: -0.6rem;
+        padding: 0.4rem 0.9rem;
+
+        &:hover {
+          box-shadow: 0px 8px 12px 0px inset #313131cb;
+          background-color: #808080;
+          border: 2px solid #3b3a39cb;
+          color: #f7f7f7;
+        }
+      }
+    }
+    .modal_co_body {
+      padding: 2rem 1.5rem;
+    }
+    .modal_co_footer {
+    }
+  }
+}

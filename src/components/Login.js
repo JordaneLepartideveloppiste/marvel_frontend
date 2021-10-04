@@ -1,20 +1,20 @@
 import axios from "axios";
 import { useState } from "react";
-//import "../assets/css/components/Login.scss";
+import "../assets/scss/Login.scss";
 
-const Login = ({ setUser, setShowModal }) => {
+const Login = ({ setUser, setShowModalCo }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordConf, setPasswordConf] = useState("");
+  
   const [errorMessage, setErrorMessage] = useState("");
 
-  /* const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      if (password === passwordConf) {
+      
         const res = await axios.post(
-          "https://lereacteur-vinted-api.herokuapp.com/user/login",
+          "http://localhost:4000/user/login",
           {
             email, //email: email
             password, // password : password
@@ -23,20 +23,18 @@ const Login = ({ setUser, setShowModal }) => {
         console.log(res.data);
         if (res.data.token) {
           setUser(res.data.token);
-          setShowModal(false);
+          setShowModalCo(false);
         }
-      } else {
-        setErrorMessage("Vos mots de passe ne sont pas identiques");
-      }
+      
     } catch (err) {
       console.log(err.message);
     }
-  }; */
+  };
 
   return (
     <div className="login">
       <div className="login_content">
-        <form /* onSubmit={handleSubmit} */>
+        <form onSubmit={handleSubmit}>
           <input
             className="input_email"
             type="email"
@@ -44,37 +42,20 @@ const Login = ({ setUser, setShowModal }) => {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            onClick={() => {
-              setEmail("");
-            }}
             required
           />
           <input
             className="input_password"
             type="password"
-            placeholder="Mot de passe"
+            placeholder="Password"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            onClick={() => {
-              setPassword("");
-            }}
             required
           />
-          <input
-            className="input_confirm_password"
-            type="password"
-            placeholder="Confirmation Mot de passe"
-            onChange={(e) => {
-              setPasswordConf(e.target.value);
-            }}
-            onClick={() => {
-              setPasswordConf("");
-            }}
-            required
-          />
+          
           <p>{errorMessage}</p>
-          <input className="input_submit" type="submit" value="Se connecter" />
+          <input className="input_submit" type="submit" value="Login" />
         </form>
       </div>
     </div>

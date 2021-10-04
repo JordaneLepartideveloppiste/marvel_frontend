@@ -3,10 +3,10 @@
   width: 18.2rem;
   height: 80vh;
   margin-bottom: 1rem;
-  background-image: url("../img/cadre_brush.png");
+  background-image: url("../img/new_border_brush.png");
   background-repeat: no-repeat;
-  background-size: 18rem 30rem;
-  background-position: 0rem 1.4rem;
+  background-size: 18rem 24rem;
+  background-position: 0rem 5rem;
   
 
   .character_card_content {
@@ -65,24 +65,53 @@
           width: 10rem;
         }
       }
-      a {
-        text-decoration: none;
-        color: #fff;
-        border: 2px solid black;
-        border-radius: 8px;
-        padding: 0.6rem 2rem;
-        margin-top: 1.8rem;
-        background-color: rgb(237, 27, 37);
+      .hero_btn {
+        width: 16rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        .card-char-btn {
+      text-decoration: none; 
+      font-family: "Trade Winds", cursive;
+      color: #302f2f;
+      background-color: #f5f4f4ef;
+      border: none;
+      padding: 0 1rem;
+      border: 2px solid #737373;
+    
 
         &:hover {
-          box-shadow: 0px 8px 12px 0px inset #313131cb;;
-          background-color: #808080;
-   
-          border: 2px solid #3b3a39cb;
-          color: #f7f7f7;
+          box-shadow: 0px 4px 10px 2px #888787a4 inset;
+          color: #f6f5f4;
+          background-color: #737373;
+          border: 2px solid #737373;
           text-shadow: 1px 2px 1px #3b3a39cb;
         }
       }
+      .to_comics {
+        width: 12vw;
+        font-size: 1.4rem;
+        height: 2.8rem;
+        border-radius: 50px 0 0 50px;
+          border-right: none;
+        padding: 0.3rem 2.4rem 0rem;
+      }
+
+      .to_favorites {
+      
+      
+      width: 4vw;
+      height: 3.2rem;
+      padding: 0.5rem 0.4rem;
+      border-radius: 0 50px 50px 0;
+
+        img {
+          transform: translate(-0.2rem, -0.2rem);
+        }
+      }
     }
+      }
+      
   }
 }

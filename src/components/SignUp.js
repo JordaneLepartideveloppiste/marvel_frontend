@@ -1,79 +1,76 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-//import "../assets/css/components/SignUp.scss";
+import "../assets/scss/SignUp.scss";
+import Login from "./Login";
 
-const SignUp = ({ setUser, setShowModalCo, setModalOnLogin }) => {
-  const [username, setUsername] = useState("Nom");
-  const [email, setEmail] = useState("Email");
-  const [password, setPassword] = useState("Mot de passe");
+const SignUp = ({ setUser, setModalOnLogin }) => {
+  const [formSubmit, setFormSubmit] = useState(false);
+  const [pseudo, setPseudo] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
 
 
 
-  /* const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
-      e.preventDefault();
 
-      const res = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
-        {
+        const res = await axios.post("http://localhost:4000/user/signup", {
+          pseudo,
           email,
-          username,
           password,
+        });
+        console.log(res.data);
+        if (res.data.token) {
+          setUser(res.data.token);
+          setFormSubmit(true);
         }
-      );
-      console.log(res.data);
-      if (res.data.token) {
-        setUser(res.data.token);
-        setShowModalCo(false);
-      }
+      
     } catch (err) {
       console.log(err.response);
       console.log(err.message);
       if (err.response.status === 409) {
-        setErrorMessage("Il semblerait que tu es déjà inscrit.");
+        setErrorMessage("You seem to be already a member of our heroes team.");
       }
     }
-  }; */
+  };
 
-  return (
+  return formSubmit ? (
+    <>
+      <h4 style={{ color: "#92C842" }}>
+        A simple matter to be a hero, now enjoy !
+      </h4>
+    </>
+  ) : (
     <div className="signup">
-      <form /* onSubmit={handleSubmit} */>
+      <form onSubmit={handleSubmit}>
         <input
-          className="input_name"
+          className="input_pseudo"
           type="text"
-          placeholder={username}
+          placeholder="Nickname"
           onChange={(e) => {
-            setUsername(e.target.value);
-          }}
-          onClick={() => {
-            setUsername("");
+            setPseudo(e.target.value);
           }}
           required
         />
         <input
           className="input_email"
           type="email"
-          placeholder={email}
+          placeholder="Email"
           onChange={(e) => {
             setEmail(e.target.value);
-          }}
-          onClick={() => {
-            setEmail("");
           }}
           required
         />
         <input
           className="input_password"
           type="password"
-          placeholder={password}
+          placeholder="Password"
           onChange={(e) => {
             setPassword(e.target.value);
-          }}
-          onClick={() => {
-            setPassword("");
           }}
           required
         />
@@ -83,17 +80,15 @@ const SignUp = ({ setUser, setShowModalCo, setModalOnLogin }) => {
           </p>
         )}
 
-        
-
-        <input className="input_submit" type="submit" value="S'inscrire" />
+        <input className="input_submit" type="submit" value="SIGNUP" />
         <Link
           className="link_to_login"
-          to="/login"
+          to="/"
           onClick={() => {
             setModalOnLogin(true);
           }}
         >
-          Tu as déjà un compte? Connecte-toi !
+          Already got an account ? Login !
         </Link>
       </form>
     </div>
