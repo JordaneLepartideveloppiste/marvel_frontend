@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../assets/scss/CardPerPage.scss"
 
 
-const CardPerPage = ({ heroes, heroesPerPage, setHeroesPerPage, setCurrentPage, setLastPage }) => {
+const CardPerPage = ({ heroes, heroesPerPage, setHeroesPerPage, setCurrentPage }) => {
   const [is12Active, SetIs12Active] = useState(true);
   const [is24Active, SetIs24Active] = useState(false);
   const [is48Active, SetIs48Active] = useState(false);
