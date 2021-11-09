@@ -1,17 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import CharacterCard from "./CharacterCard";
 import SearchBar from "./SearchBar";
 import ModalHero from "./ModalHero";
 import "../assets/scss/CharactersList.scss";
-import first from "../assets/img/first.png";
-import firstHover from "../assets/img/first_hover.png";
-import last from "../assets/img/last.png";
-import lastHover from "../assets/img/last_hover.png";
-import next from "../assets/img/next.png";
-import nextHover from "../assets/img/next_hover.png";
-import previous from "../assets/img/previous.png";
-import previousHover from "../assets/img/previous_hover.png";
 import Pagination from "./Pagination";
 import CardPerPage from "./CardPerPage";
 

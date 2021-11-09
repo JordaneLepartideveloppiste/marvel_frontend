@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../assets/scss/SignUp.scss";
-import Login from "./Login";
+
+
 
 const SignUp = ({ setUser, setModalOnLogin }) => {
   const [formSubmit, setFormSubmit] = useState(false);

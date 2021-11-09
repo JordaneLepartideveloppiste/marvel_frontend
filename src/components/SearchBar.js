@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../assets/scss/SearchBar.scss";
 import Suggestions from "./Suggestions";
 
-const SearchBar = ({ heroesNamesList, heroes, setShowModalHero, setHeroId }) => {
+const SearchBar = ({ heroesNamesList, setShowModalHero, setHeroId }) => {
   const [searchValue, setSearchValue] = useState("");
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(0);

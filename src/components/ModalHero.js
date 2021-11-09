@@ -33,7 +33,7 @@ const heroSelected = heroes.find((hero) => hero._id === heroId);
         }
       };
       fetchData();
-    }, []);
+    }, [heroId]);
 
     const parentRef = useRef();
     const childRef = useRef();

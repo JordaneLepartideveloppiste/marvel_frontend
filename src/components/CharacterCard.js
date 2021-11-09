@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
-import { Link, useHistory, } from "react-router-dom";
-import ModalHero from "./ModalHero";
+
+import { Link} from "react-router-dom";
 import "../assets/scss/CharacterCard.scss"
 
 const CharacterCard = ({ hero, setShowModalHero, setHeroId }) => {
@@ -44,7 +42,7 @@ const CharacterCard = ({ hero, setShowModalHero, setHeroId }) => {
           <div className="hero_btn">
             <Link className="card-char-btn to_comics" onClick={handleClick}>Comics</Link>
           <Link className="card-char-btn to_favorites" onClick={handleLike}>
-            <img src="https://img.icons8.com/windows/38/000000/captain-america.png" />
+            <img src="https://img.icons8.com/windows/38/000000/captain-america.png" alt="like_icon"/>
           </Link>
           </div>
         </div>

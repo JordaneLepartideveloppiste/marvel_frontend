@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/img/logo_marvel.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ModalCo from "./ModalCo";
 import "../assets/scss/Navbar.scss";
 
@@ -67,21 +66,21 @@ const Navbar = ({
         <div className="navbar_second_row">
           <NavLink to="/">
             <span className="text_btn">Characters</span>
-            <img src="https://img.icons8.com/fluency-systems-regular/32/000000/groot.png" />
+            <img src="https://img.icons8.com/fluency-systems-regular/32/000000/groot.png" alt="charcters_icon"/>
           </NavLink>
           <NavLink to="/comics">
             <span className="text_btn">Comics</span>
-            <img src="https://img.icons8.com/ios/34/000000/comics-magazine.png" />
+            <img src="https://img.icons8.com/ios/34/000000/comics-magazine.png" alt="comics_icon"/>
           </NavLink>
           {userToken && (
             <>
               <NavLink to="/favorites">
                 <span className="text_btn">Favorites</span>
-                <img src="https://img.icons8.com/windows/38/000000/captain-america.png" />
+                <img src="https://img.icons8.com/windows/38/000000/captain-america.png" alt="favorites_icon"/>
               </NavLink>
               <NavLink to="/">
                 <span className="text_btn">Goodies</span>
-                <img src="https://img.icons8.com/ios/38/000000/boom.png" />
+                <img src="https://img.icons8.com/ios/38/000000/boom.png" alt="goodies_icon"/>
               </NavLink>
             </>
           )}
