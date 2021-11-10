@@ -1,0 +1,15 @@
+.comics {
+    width: 100vw;
+    .comics_content {
+        background-color: #bababa;
+        background-image: url("../img/bg_card2.jpeg");
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        box-shadow: 0px 40px 20px 2px inset #707070;
+        padding: 4rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+}

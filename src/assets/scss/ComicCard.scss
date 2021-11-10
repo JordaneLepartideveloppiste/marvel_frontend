@@ -1,0 +1,188 @@
+.comic_card {
+  border: 4px solid #626262;
+  background-color: #ffffffb0;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  
+
+  .comic_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .image_card {
+      #comic_picture {
+          
+      }
+    }
+    .infos_card {
+      .name {
+        text-align: center;
+        font-family: "Bangers", cursive;
+        margin: 0.6rem 0;
+        .comic_name {
+          font-size: 1.2rem;
+          color: #302f2f;
+        }
+      }
+      .description,
+      .description2,
+      .description3 {
+        font-family: "Trade Winds", cursive;
+        font-size: 0.9rem;
+        .comic_description {
+          margin: 0;
+          text-align: justify;
+        }
+      }
+
+      .no_description {
+        font-family: "Trade Winds", cursive;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .odd {
+    width: 24vw;
+    flex-direction: column-reverse;
+
+    .image_card {
+      #comic_picture {
+        width: 19vw;
+        box-shadow: 0px 4px 10px 2px rgba(69, 69, 69, 0.8);
+      }
+    }
+    .infos_card {
+      .name {
+        margin-top: 0;
+      }
+      .description,
+      .description2,
+      .description3 {
+        overflow: scroll;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .description {
+        height: 16vh;
+        margin-bottom: 1rem;
+      }
+      .description2 {
+        height: 17vh;
+      }
+      .description3 {
+        height: 14vh;
+      }
+      .no_description {
+      }
+    }
+  }
+  .even {
+    width: 22vw;
+
+    .image_card {
+      #comic_picture {
+        width: 18vw;
+        box-shadow: 0px 4px 10px 2px rgba(69, 69, 69, 0.8);
+      }
+    }
+    .infos_card {
+      .name {
+        .comic_name {
+        }
+      }
+      .description,
+      .description2,
+      .description3 {
+        overflow: scroll;
+        margin-top: 0.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .description {
+        height: 20vh;
+        margin-bottom: 1rem;
+      }
+      .description2 {
+        height: 20vh;
+      }
+      .description3 {
+        height: 10vh;
+      }
+      .no_description {
+      }
+    }
+  }
+}
+.little_card {
+  width: 20vw;
+  height: 90vh;
+  border: 4px solid red;
+  border-radius: 10px;
+  background-color: #b6b6b69f;
+  margin-bottom: 2rem;
+  padding: 0.8rem;
+
+  .comic_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .image_card {
+      #comic_picture {
+        width: 17vw;
+        box-shadow: 0px 4px 10px 2px rgba(59, 59, 59, 0.8);
+      }
+    }
+    .infos_card {
+      .name {
+        text-align: center;
+        font-family: "Bangers", cursive;
+        margin: 0.6rem 0;
+        .comic_name {
+          font-size: 1.2rem;
+          color: #302f2f;
+        }
+      }
+      .description {
+        height: 24vh;
+        overflow: scroll;
+        font-family: "Trade Winds", cursive;
+        font-size: 0.9rem;
+        .comic_description {
+          margin: 0;
+          text-align: justify;
+        }
+      }
+      .description2 {
+        height: 22vh;
+        overflow: scroll;
+        font-family: "Trade Winds", cursive;
+        font-size: 0.9rem;
+        .comic_description {
+          margin: 0;
+          text-align: justify;
+        }
+      }
+      .description3 {
+        height: 18vh;
+        overflow: scroll;
+        font-family: "Trade Winds", cursive;
+        font-size: 0.9rem;
+        .comic_description {
+          margin: 0;
+          text-align: justify;
+        }
+      }
+      .no_description {
+        font-family: "Trade Winds", cursive;
+      }
+      .charcters_in {
+      }
+    }
+  }
+}

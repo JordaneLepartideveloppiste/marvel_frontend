@@ -29,7 +29,6 @@ const CharactersList = ({ data }) => {
         <div className="characters_list_content">
           <SearchBar
             heroesNamesList={heroesNamesList}
-            heroes={heroes}
             setShowModalHero={setShowModalHero}
             setHeroId={setHeroId}
           />
